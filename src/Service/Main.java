@@ -10,7 +10,7 @@ public class Main {
 
         try {
 
-            User newUser = userManager.createUser("Paola", "Caushi", "pCaushi");
+            User newUser = userManager.createUser("paola", "caustic", "paola123");
             System.out.println(newUser);
 
 
@@ -26,7 +26,7 @@ public class Main {
             System.out.println(userManager.showSpidOf("paola"));
 
 
-            userManager.modifyUser("paola", null, "Ccc");
+            userManager.modifyUser("paola", null, "payola");
 
 
             spdManager.modifySpid(1, Status.FOR_REVIEW);

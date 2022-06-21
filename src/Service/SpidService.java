@@ -7,13 +7,13 @@ import java.util.*;
 import java.util.Date;
 
 public class SpidService {
-    private List<Spid> data = new ArrayList<Spid>();
-    private Datas datas = new Datas();
+    private final List<Spid> data = new ArrayList<>();
+    private final Datas datas = new Datas();
 
     public Spid getSpid(long id) throws Exception {
-        for (int i = 0; i < data.size(); ++i) {
-            if (data.get(i).getId() == id) {
-                return data.get(i);
+        for (Spid datum : data) {
+            if (datum.getId() == id) {
+                return datum;
             }
         }
         throw new Exception(String.format("Spid with id:'%d' does not exists!", id));
@@ -24,7 +24,7 @@ public class SpidService {
         Spid spd = new Spid(id, new Date(), user);
         user.setSpid(spd);
         data.add(spd);
-        System.out.println(String.format("Spid %d created successfully!", id));
+        System.out.printf("Spid %d created successfully!%n", id);
         return spd;
     }
     public void modifySpid(long id, Status status) throws Exception {
