@@ -20,7 +20,7 @@ public class Spid extends MainClass {
 
     @Override
     public String toString() {
-        return ("Spid" + "id=" + getId() + ", user=" + user + ", status='" + status );
+        return ("Spid" + "id=" + getId() + ", user=" + getUser() + ", status='" + getStatus() );
     }
 
     public User getUser() {
